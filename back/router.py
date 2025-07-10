@@ -48,7 +48,6 @@ async def broadcast_message(sender, message):
         if client != sender:
             try:
                 await client.send(message)
-                print(f"{client} 已发送")
             except Exception as e:
                 print(f"Error: 发送失败 Client: {client} sender: {sender} message: {message}， {e}")
 

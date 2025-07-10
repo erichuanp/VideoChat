@@ -36,9 +36,14 @@ async def connection_handler(websocket, path=None):
             elif data.get('type') == "candidate":
                 print(f"收到 candidate 消息")
             elif data.get('type') == "ping":
+                continue
                 print(f"收到 ping 消息")
             elif data.get('type') == "pong":
+                continue
                 print(f"收到 pong 消息")
+            elif data.get('type') == "delay-report":
+                continue
+                print(f"收到 delay-report 消息")
             else:
                 print(f"收到未知消息 {message}")
 
